@@ -3,6 +3,10 @@ package edu.miguel.tema.tipovariaveis;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello, wolrd!");
+        short numeroCurto = 1;
+        int numeroNormal = numeroCurto;
+
+        // Exemplo de cast
+        short numeroCurto2 = (short) numeroNormal;
     }
 }
