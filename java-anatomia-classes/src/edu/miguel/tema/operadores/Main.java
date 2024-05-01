@@ -16,11 +16,5 @@ public class Main {
                 break;
             }
         }
-
-        int resultado = numero < 11 ? numero++ : 0;
-        System.out.println(resultado);
-        }
-
-
     }
 }
