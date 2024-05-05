@@ -10,7 +10,7 @@ public class ExemploForArray {
             System.out.println("Aluno " + alunos[x]);
         }
 
-        System.out.println(alunos);
+        System.out.println(Arrays.toString(alunos));
 
     }
 }
