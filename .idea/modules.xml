@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Bootcamp-santander.iml" filepath="$PROJECT_DIR$/.idea/Bootcamp-santander.iml" />
+      <module fileurl="file://$PROJECT_DIR$/debugging-java/debugging-java.iml" filepath="$PROJECT_DIR$/debugging-java/debugging-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/estruturas-condicionais/estruturas-condicionais.iml" filepath="$PROJECT_DIR$/estruturas-condicionais/estruturas-condicionais.iml" />
+      <module fileurl="file://$PROJECT_DIR$/estruturas-repeticao/estruturas-repeticao.iml" filepath="$PROJECT_DIR$/estruturas-repeticao/estruturas-repeticao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exemplo-pacotes/exemplo-pacotes.iml" filepath="$PROJECT_DIR$/exemplo-pacotes/exemplo-pacotes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-anatomia-classes/java-anatomia-classes.iml" filepath="$PROJECT_DIR$/java-anatomia-classes/java-anatomia-classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/visibilidade-recursos/visibilidade-recursos.iml" filepath="$PROJECT_DIR$/visibilidade-recursos/visibilidade-recursos.iml" />
+    </modules>
+  </component>
+</project>
