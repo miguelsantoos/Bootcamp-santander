@@ -1,20 +1,13 @@
-public class ServicoMensagem {
+public abstract class ServicoMensagem {
 
-    public void enviarMensagem() {
-        validarConectadoInternet();
-        System.out.println("Enviando mensagem");
-        salvarHistoricoMensagem();
-    }
+    public abstract void enviarMensagem();
+    public abstract void recebrMensagem();
 
-    public void recebrMensagem() {
-        System.out.println("Recebendo mensagem");
-    }
-
-    private void validarConectadoInternet() {
+    protected void validarConectadoInternet() {
         System.out.println("Verificando se estar conectado na internet");
     }
 
-    private void salvarHistoricoMensagem() {
+    protected void salvarHistoricoMensagem() {
         System.out.println("Salvando historico de mensagem");
     }
 }
