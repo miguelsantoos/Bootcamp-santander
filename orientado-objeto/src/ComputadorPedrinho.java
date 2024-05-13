@@ -1,19 +1,24 @@
+import java.util.Scanner;
+
 public class ComputadorPedrinho {
 
     public static void main(String[] args) {
-        MSNMensagem msn = new MSNMensagem();
-        msn.enviarMensagem();
-        msn.recebrMensagem();
-        System.out.println("");
+        Scanner scanner = new Scanner(System.in);
 
-        FacebookMensagem fcb = new FacebookMensagem();
-        fcb.enviarMensagem();
-        fcb.recebrMensagem();
-        System.out.println("");
+        System.out.println("Qual app: ");
+        String appEscolhido = scanner.next();
 
-        Telegram tlg = new Telegram();
-        tlg.enviarMensagem();
-        tlg.recebrMensagem();
+        ServicoMensagem sm = null;
+
+        if (appEscolhido.equals("MSN")) {
+            sm = new MSNMensagem();
+        } else if (appEscolhido.equals("Face")) {
+            sm = new FacebookMensagem();
+        }else if (appEscolhido.equals("tele"))
+            sm = new Telegram();
+
+        sm.enviarMensagem();
+        sm.recebrMensagem();
     }
 
 }
