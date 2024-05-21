@@ -1,5 +1,7 @@
 package com.miguel.list.operaçõesBasicas;
 
+import java.util.Objects;
+
 public class Tarefa {
 
     private String descricao;
@@ -11,4 +13,9 @@ public class Tarefa {
     public String getDescricao() {
         return descricao;
     }
+    @Override
+    public String toString() {
+        return descricao;
+    }
+
 }
