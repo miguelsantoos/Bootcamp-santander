@@ -44,7 +44,11 @@ public class CarrinhoDeCompras {
     }
 
     public void descricaoCarrinho(){
-        System.out.println(listaDeItens);
+        System.out.println("Alimento " + " Preço " + " Unidades ");
+        for (int i = 0; i < listaDeItens.size(); i++) {
+            System.out.println(listaDeItens.get(i));
+        }
+        System.out.println(" ");
     }
 
     public static void main(String[] args) {
