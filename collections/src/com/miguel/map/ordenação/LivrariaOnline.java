@@ -64,12 +64,49 @@ public class LivrariaOnline {
         Map<String, Livro> livrosPorAutor = new LinkedHashMap<>();
 
         for(Map.Entry<String, Livro> entry : livros.entrySet()) {
-            Livro livro = entry.getValue();
-            if (livro.getAutor().equals(autor)) {
+            if (entry.getValue().getAutor().equals(autor)) {
+                Livro livro = entry.getValue();
                 livrosPorAutor.put(entry.getKey(), livro);
             }
         }
         return livrosPorAutor;
+    }
+
+    public List<Livro> obterLivroMaisCaro() {
+        List<Livro> livrosMaisCaro = new ArrayList<>();
+        double maiorPreco = Double.MIN_VALUE;
+
+        for (Livro livro : livros.values()) {
+            if (livro.getPreco() > maiorPreco) {
+                maiorPreco = livro.getPreco();
+            }
+        }
+
+        for(Map.Entry<String, Livro> entry : livros.entrySet()) {
+            if (entry.getValue().getPreco() == maiorPreco) {
+                livrosMaisCaro.add(livros.get(entry.getKey()));
+                break;
+            }
+        }
+        return livrosMaisCaro;
+    }
+
+    public List<Livro> exibirLivroMaisBarato() {
+        List<Livro> livrosMaisBarato = new ArrayList<>();
+        double menorPreco = Double.MAX_VALUE;
+
+        for (Livro livro : livros.values()){
+            if (livro.getPreco() < menorPreco){
+                menorPreco = livro.getPreco();
+            }
+        }
+
+        for (Map.Entry<String, Livro> entry : livros.entrySet()) {
+            if (entry.getValue().getPreco() == menorPreco) {
+                livrosMaisBarato.add(livros.get(entry.getKey()));
+            }
+        }
+        return livrosMaisBarato;
     }
 
 
@@ -90,8 +127,20 @@ public class LivrariaOnline {
         System.out.println("Livros ordenados por autor: \n" + livrariaOnline.exibirLivrosOrdenadoPorAutor());
 
         // Pesquisa livros por autor
-        String autorPesquisa = "Josh Malerman";
-        livrariaOnline.pesquisarLivrosPorAutor(autorPesquisa);
+        String autorPesquisa = "Agatha Christie";
+        System.out.println("Livro pesquisado por autor: \n" +livrariaOnline.pesquisarLivrosPorAutor(autorPesquisa));
+
+        // Obtém e exibe o livro mais caro
+        System.out.println("Livro mais caro: \n" + livrariaOnline.obterLivroMaisCaro());
+
+        // Obtém e exibe o livro mais barato
+        System.out.println("Livro mais barato: \n" + livrariaOnline.exibirLivroMaisBarato());
+
+        // Remover um livro pelo título
+        livrariaOnline.removerLivro("1984");
+        System.out.println(livrariaOnline.livros);
+        //System.out.println("Livros ordenados por autor: \n" + livrariaOnline.exibirLivrosOrdenadoPorAutor());
+
 
     }
 
